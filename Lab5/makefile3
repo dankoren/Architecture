@@ -1,0 +1,10 @@
+all: task3
+
+task3: task3.o LineParser.c
+	gcc -g -Wall -o task3 task3.o
+
+task3.o: task3.c 
+	gcc -g -Wall -c -o task3.o task3.c 
+
+clean: 
+	rm -f *.o task3
